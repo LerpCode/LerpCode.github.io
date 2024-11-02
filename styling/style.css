@@ -120,3 +120,8 @@ nav li:first-child {
         width: 100%;
     }
 }
+
+.logo-text {
+    display: flex;
+    align-items: center; /* Aligns the image and text vertically */
+}
