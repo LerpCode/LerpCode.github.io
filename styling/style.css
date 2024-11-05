@@ -181,6 +181,7 @@ nav li:first-child {
 .title {
     font-size: 0.9em;
     color: #666;
+    animation: slideIn 0.5s ease forwards;
 }
 
 .pill:hover {
@@ -196,4 +197,13 @@ nav li:first-child {
         padding: 12px 15px;
         width: 100%;
     }
+}
+
+
+h2 {
+    font-size: 24px; 
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0; 
+    font-weight: bold;
 }
