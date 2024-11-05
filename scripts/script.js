@@ -23,3 +23,8 @@ function debounce(func, wait) {
 const debouncedShowSidebar = debounce(showSidebar, 300);
 const debouncedHideSidebar = debounce(hideSidebar, 300);
 
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active'); // Toggle the 'active' class to show/hide the sidebar
+}
+

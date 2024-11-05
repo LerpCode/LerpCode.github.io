@@ -3,62 +3,17 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eaeaea;
-}
-@media (max-width: 1200px) {
-    ul li {
-        display: inline-block;
-        margin: 5px; 
-    }
-    .developer-pills {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 600px) {
-    ul li {
-        display: block;
-        text-align: center; 
-    }
-    ul li a {
-        padding: 10px 15px; 
-    }
-    .pill {
-        font-size: 0.9em;
-        padding: 12px 15px;
-        width: 100%;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-    .pill {
-        width: 90%;
-    }
 }
 
 ul li {
     display: inline;
     list-style: none;
 }
+
 ul li a {
     color: black;
     display: inline-flex;
@@ -108,45 +63,18 @@ nav li:first-child {
     width: 250px;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.sidebar li {
-    width: 100%;
-}
-
-.sidebar a {
-    width: 100%;
-}
-
-.menu-button {
-    display: none;
-}
-
-@media(max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-}
-
-@media(max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
-}
-
 .logo-text {
     display: flex;
     align-items: center; 
 }
-.logo{
+
+.logo {
     width: 100%; 
     height: auto; 
     max-width: 50px; 
@@ -192,20 +120,6 @@ nav li:first-child {
     opacity: 0;
 }
 
-.circle {
-    width: 50px;
-    height: 50px;
-    background-color: #007bff;
-    border-radius: 50%;
-    margin-bottom: 8px;
-}
-
-.title {
-    font-size: 0.9em;
-    color: #666;
-    animation: slideIn 0.5s ease forwards;
-}
-
 .pill:hover {
     background-color: #d0d0d0;
     transform: scale(1.05);
@@ -213,7 +127,109 @@ nav li:first-child {
     border-color: #007bff;
 }
 
+h2 {
+    font-size: 24px; 
+    color: #333; 
+    text-align: center; 
+    margin: 20px 0; 
+    font-weight: bold;
+}
+
+.programming-languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.language {
+    text-align: center; 
+    transition: transform 0.3s; 
+}
+
+.language i {
+    font-size: 50px; 
+    color: #999; 
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.language i:hover {
+    animation: bounce 0.5s; 
+    color: inherit; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.language i.fa-html5:hover {
+    color: #E44D26; 
+}
+
+.language i.fa-css3-alt:hover {
+    color: #1572B6; 
+}
+
+.language i.fa-square-js:hover {
+    color: #F7DF1E; 
+}
+
+.language i.fa-font-awesome:hover {
+    color: #4E4E4E; 
+}
+
+.language:hover {
+    transform: scale(1.1); 
+}
+
+.language span {
+    display: block; 
+    margin-top: 5px; 
+    font-size: 16px; 
+    color: #333; 
+}
+
+@media (max-width: 1200px) {
+    ul li {
+        display: inline-block;
+        margin: 5px; 
+    }
+    .developer-pills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media (max-width: 600px) {
+    ul li {
+        display: block;
+        text-align: center; 
+    }
+    ul li a {
+        padding: 10px 15px; 
+    }
     .pill {
         font-size: 0.9em;
         padding: 12px 15px;
@@ -221,11 +237,34 @@ nav li:first-child {
     }
 }
 
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+    .pill {
+        width: 90%;
+    }
+}
 
-h2 {
-    font-size: 24px; 
-    color: #333; 
-    text-align: center; 
-    margin: 20px 0; 
-    font-weight: bold;
+.menu-button {
+    display: none; /* Hide the menu button by default */
+    font-size: 24px; /* Adjust icon size */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none; /* Hide elements with this class on mobile */
+    }
+    .menu-button {
+        display: block; /* Show the menu button on smaller screens */
+    }
+}
+
+.sidebar {
+    display: none; /* Hide sidebar by default */
+}
+
+.sidebar.active {
+    display: flex; /* Show sidebar when active */
 }
