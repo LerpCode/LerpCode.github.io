@@ -143,12 +143,12 @@ nav li:first-child {
 
 @keyframes slideIn {
     from {
-        transform: translateY(20px); /* Start slightly below */
-        opacity: 0; /* Start invisible */
+        transform: translateY(20px); 
+        opacity: 0; 
     }
     to {
-        transform: translateY(0); /* End at original position */
-        opacity: 1; /* End fully visible */
+        transform: translateY(0); 
+        opacity: 1; 
     }
 }
 
