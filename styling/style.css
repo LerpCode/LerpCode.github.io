@@ -131,3 +131,69 @@ nav li:first-child {
     max-width: 50px; 
     margin-right: 5px;
 }
+
+.developer-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px); /* Start slightly below */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+.pill {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+    width: 30%;
+    box-sizing: border-box;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.pill:hover {
+    background-color: #d0d0d0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+    .pill {
+        font-size: 0.9em;
+        padding: 12px 15px;
+        width: 100%;
+    }
+}
