@@ -314,3 +314,7 @@ h3 {
     color: #F38020; 
     transform: scale(1.1); 
 }
+
+.hidden {
+    display: none;
+}
