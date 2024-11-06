@@ -83,15 +83,13 @@ nav li:first-child {
 .developer-pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 20px auto;
     justify-content: center;
-    max-width: 1000px;
-    padding-top: 20px;
+    margin: 20px auto;
 }
 
 .pill {
-    background-color: #e0e0e0;
+    background-color: #f9f9f9;
+    border: 2px solid #007bff;
     border-radius: 25px;
     padding: 15px 20px;
     font-size: 1em;
@@ -99,26 +97,24 @@ nav li:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    border: 2px solid transparent;
-    width: 30%;
-    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
 }
 
 .pill:hover {
-    background-color: #d0d0d0;
+    background-color: #e0e0e0;
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    border-color: #007bff;
 }
 
 h2 {
-    font-size: 24px; 
-    color: #333; 
-    text-align: center; 
-    margin: 20px 0; 
-    font-weight: bold;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
 }
 
 .programming-languages {
@@ -131,7 +127,16 @@ h2 {
 
 .language {
     text-align: center; 
-    transition: transform 0.3s; 
+    margin: 10px;
+}
+
+.language-logo {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.language-logo:hover {
+    color: #0056b3;
 }
 
 .language i {
@@ -226,22 +231,22 @@ h2 {
 }
 
 .sidebar {
-    display: none; /* Hide sidebar by default */
+    display: none;
 }
 
 .sidebar.active {
-    display: flex; /* Show sidebar when active */
+    display: flex; 
 }
 
 .sidebar-icon {
-    display: block; /* Ensure the icon is displayed */
-    cursor: pointer; /* Change cursor to pointer */
+    display: block; 
+    cursor: pointer; 
 }
 
-/* Media query for mobile devices */
+
 @media (max-width: 768px) {
     .sidebar {
-        display: none; /* Keep sidebar hidden on mobile */
+        display: none;
     }
 }
 
@@ -291,4 +296,11 @@ h3 {
 
 .box:hover h3 {
     color: #007bff;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
