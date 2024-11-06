@@ -26,3 +26,25 @@ function toggleSidebar() {
     sidebar.classList.toggle('active'); // Toggle the 'active' class to show/hide the sidebar
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const boxes = document.querySelectorAll('.box');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    boxes.forEach(box => {
+        observer.observe(box);
+    });
+});
+
