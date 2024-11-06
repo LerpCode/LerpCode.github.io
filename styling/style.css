@@ -304,3 +304,13 @@ h3 {
         transform: translateY(0);
     }
 }
+
+.language i.fa-github:hover {
+    color: #181717; 
+    transform: scale(1.1); 
+}
+
+.language i.fa-cloudflare:hover {
+    color: #F38020; 
+    transform: scale(1.1); 
+}
