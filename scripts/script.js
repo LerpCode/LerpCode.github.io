@@ -1,9 +1,9 @@
 function showSidebar() {
-    document.getElementById('sidebar').style.display = 'block'; // Show sidebar
+    document.getElementById('sidebar').style.display = 'block'; 
 }
 
 function hideSidebar() {
-    document.getElementById('sidebar').style.display = 'none'; // Hide sidebar
+    document.getElementById('sidebar').style.display = 'none'; 
 }
 
 function debounce(func, wait) {
