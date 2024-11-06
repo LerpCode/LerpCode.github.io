@@ -1,11 +1,9 @@
 function showSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
+    document.getElementById('sidebar').style.display = 'block'; // Show sidebar
 }
 
 function hideSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
+    document.getElementById('sidebar').style.display = 'none'; // Hide sidebar
 }
 
 function debounce(func, wait) {

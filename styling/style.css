@@ -268,3 +268,16 @@ h2 {
 .sidebar.active {
     display: flex; /* Show sidebar when active */
 }
+
+.sidebar-icon {
+    display: block; /* Ensure the icon is displayed */
+    cursor: pointer; /* Change cursor to pointer */
+    /* Add other styles for the icon */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Keep sidebar hidden on mobile */
+    }
+}
