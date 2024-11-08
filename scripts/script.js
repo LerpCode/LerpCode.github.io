@@ -18,8 +18,8 @@ function debounce(func, wait) {
     };
 }
 
-const debouncedShowSidebar = debounce(showSidebar, 300);
-const debouncedHideSidebar = debounce(hideSidebar, 300);
+const debouncedShowSidebar = debounce(showSidebar, 100);
+const debouncedHideSidebar = debounce(hideSidebar, 100);
 
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
