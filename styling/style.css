@@ -198,6 +198,9 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for larger screens */
+    }
 }
 
 @media (max-width: 800px) {
@@ -210,6 +213,9 @@ h2 {
     nav ul {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .sidebar {
+        width: 100%; /* Full width on smaller screens */
     }
 }
 
@@ -226,6 +232,9 @@ h2 {
         padding: 8px 10px;
         width: auto;
     }
+    .developer-pills {
+        margin: 10px; /* Reduce margin for smaller screens */
+    }
 }
 
 @media (max-width: 400px) {
@@ -234,6 +243,20 @@ h2 {
     }
     .pill {
         width: 90%;
+    }
+    .logo {
+        max-width: 40px; /* Adjust logo size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .code-editor,
+    .output-panel {
+        margin-bottom: 1rem;
+        width: 100%; /* Ensure full width on smaller screens */
     }
 }
 
@@ -263,13 +286,6 @@ h2 {
     }
 }
 
-.box-container {
-    /* Removed custom styles, using Bootstrap grid */
-}
-
-.box {
-    /* Removed custom styles, using Bootstrap card */
-}
 
 .image-placeholder {
     height: 150px; 
