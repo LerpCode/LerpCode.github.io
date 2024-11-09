@@ -330,3 +330,47 @@ h3 {
 .hidden {
     display: none;
 }
+
+
+.code-editor {
+    min-height: 300px;
+    font-family: monospace;
+    border-radius: 8px;
+}
+
+.output-panel {
+    min-height: 300px;
+    border-radius: 8px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.visualization-area {
+    min-height: 200px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.featured-categories .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .code-editor,
+    .output-panel {
+        margin-bottom: 1rem;
+    }
+}
