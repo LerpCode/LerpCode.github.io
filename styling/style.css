@@ -103,7 +103,7 @@ nav li:first-child {
     background-color: #f9f9f9;
     border: 2px solid #007bff;
     border-radius: 25px;
-    padding: 15px 20px;
+    padding: 10px 15px;
     font-size: 1em;
     color: #333;
     display: flex;
@@ -115,6 +115,7 @@ nav li:first-child {
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn 0.5s forwards;
+    width: auto;
 }
 
 .pill:hover {
@@ -222,8 +223,8 @@ h2 {
     }
     .pill {
         font-size: 0.9em;
-        padding: 12px 15px;
-        width: 100%;
+        padding: 8px 10px;
+        width: auto;
     }
 }
 
