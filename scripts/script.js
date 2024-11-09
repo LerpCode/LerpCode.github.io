@@ -22,8 +22,8 @@ const debouncedShowSidebar = debounce(showSidebar, 100);
 const debouncedHideSidebar = debounce(hideSidebar, 100);
 
 function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('active'); 
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
