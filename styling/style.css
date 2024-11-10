@@ -142,7 +142,6 @@ h2 {
     text-align: center; 
     margin: 10px;
 }
-
 .language-logo {
     color: #007bff;
     transition: color 0.3s;
@@ -258,6 +257,13 @@ h2 {
         margin-bottom: 1rem;
         width: 100%; /* Ensure full width on smaller screens */
     }
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 8px;
 }
 
 .menu-button {
