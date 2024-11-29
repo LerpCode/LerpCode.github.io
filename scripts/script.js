@@ -1,11 +1,22 @@
-function showSidebar() {
-    document.getElementById('sidebar').style.display = 'block'; 
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    if (!sidebar) {
+        console.error('Sidebar element not found');
+        return;
+    }
+    sidebar.classList.toggle('show');
 }
 
 function hideSidebar() {
-    document.getElementById('sidebar').style.display = 'none'; 
+    const sidebar = document.getElementById('sidebar');
+    if (!sidebar) {
+        console.error('Sidebar element not found');
+        return;
+    }
+    sidebar.classList.remove('show');
 }
 
+// Utility function for performance optimization
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -18,16 +29,11 @@ function debounce(func, wait) {
     };
 }
 
-const debouncedShowSidebar = debounce(showSidebar, 100);
-const debouncedHideSidebar = debounce(hideSidebar, 100);
-
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('active');
-}
-
+// Animation observer for elements with 'animate-on-scroll' class
 document.addEventListener('DOMContentLoaded', function() {
-    const boxes = document.querySelectorAll('.box');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    if (animatedElements.length === 0) return;
 
     const observerOptions = {
         root: null,
@@ -38,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    boxes.forEach(box => {
-        observer.observe(box);
+    animatedElements.forEach(element => {
+        observer.observe(element);
     });
 });
-
