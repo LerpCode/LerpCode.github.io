@@ -15,8 +15,6 @@ function hideSidebar() {
     }
     sidebar.classList.remove('show');
 }
-
-// Utility function for performance optimization
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -29,7 +27,6 @@ function debounce(func, wait) {
     };
 }
 
-// Animation observer for elements with 'animate-on-scroll' class
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
