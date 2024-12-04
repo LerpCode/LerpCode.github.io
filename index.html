@@ -145,15 +145,7 @@
     <script>
         const form = document.getElementById('crudForm');
         const itemList = document.getElementById('itemList');
-        let items = [];
-
-        // Fetch items from server
-        fetch('/items')
-            .then(response => response.json())
-            .then(data => {
-                items = data;
-                renderItems();
-            });
+        let items = JSON.parse(localStorage.getItem('items')) || [];
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -205,16 +197,11 @@
         }
 
         function saveItems() {
-            fetch('/items', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(items)
-            })
-            .then(response => response.text())
-            .then(message => console.log(message));
+            localStorage.setItem('items', JSON.stringify(items));
         }
+
+        // Initial render
+        renderItems();
     </script>
 
     <footer class="bg-dark text-light py-5 mt-5">
