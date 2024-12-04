@@ -1,0 +1,17 @@
+{
+  "name": "learnalgo-website",
+  "version": "1.0.0",
+  "description": "This is a group project for last term exam. Made by 3 students from UIT, to learn algorithms efficiently. Made with love.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security"
+  }
+}
