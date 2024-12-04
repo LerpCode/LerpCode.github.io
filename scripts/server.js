@@ -28,6 +28,33 @@ app.post('/items', (req, res) => {
     });
 });
 
+app.put('/items/:id', (req, res) => {
+    const itemId = req.params.id;
+    const updatedItem = req.body;
+
+    fs.readFile('items.json', 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Error reading items');
+        }
+
+        let items = JSON.parse(data);
+        const itemIndex = items.findIndex(item => item.id === itemId);
+
+        if (itemIndex === -1) {
+            return res.status(404).send('Item not found');
+        }
+
+        items[itemIndex] = { ...items[itemIndex], ...updatedItem };
+
+        fs.writeFile('items.json', JSON.stringify(items), (err) => {
+            if (err) {
+                return res.status(500).send('Error updating item');
+            }
+            res.send('Item updated successfully');
+        });
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
