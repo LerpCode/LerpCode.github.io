@@ -14,6 +14,18 @@
         body {
             margin: 0;
         }
+        .sidebar {
+            display: none;
+            color: #000000; /* Dark text color for contrast */
+            height: auto; /* Adjust height as needed */
+            max-height: 80vh; /* Limit the height to 80% of the viewport */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            padding: 10px; /* Add padding for better spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        }
+        .sidebar.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -88,6 +100,14 @@
     </div>
     
     <script src="./scripts/script.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('show');
+        }
+        function hideSidebar() {
+            document.getElementById('sidebar').classList.remove('show');
+        }
+    </script>
 </body>
 </html>
 

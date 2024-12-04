@@ -30,6 +30,19 @@
             margin: 0;
             color: #6c757d;
         }
+        .sidebar {
+            display: none;
+            background-color: #f8f9fa; /* Light background color */
+            color: #333; /* Dark text color for contrast */
+            height: auto; /* Adjust height as needed */
+            max-height: 80vh; /* Limit the height to 80% of the viewport */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            padding: 10px; /* Add padding for better spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        }
+        .sidebar.show {
+            display: block;
+        }
     </style>
     <link rel="preload" href="../styling/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'; document.body.style.display='block';">
     <noscript><link rel="stylesheet" href="../styling/style.css"></noscript>
@@ -92,6 +105,13 @@
         </ul>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <script src="./scripts/script.js"></script>
-
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('show');
+        }
+        function hideSidebar() {
+            document.getElementById('sidebar').classList.remove('show');
+        }
+    </script>
 </body>
 </html>

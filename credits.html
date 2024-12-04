@@ -8,6 +8,19 @@
         body {
             display: none;
         }
+        .sidebar {
+            display: none;
+            background-color: #f8f9fa;
+            color: #333;
+            height: auto;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar.show {
+            display: block;
+        }
     </style>
     <link rel="preload" href="../styling/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'; document.body.style.display='block';">
     <noscript><link rel="stylesheet" href="../styling/style.css"></noscript>
