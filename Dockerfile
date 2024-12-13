@@ -1,12 +1,13 @@
+FROM node:14
 
-FROM node:12
+WORKDIR /usr/src/app/learnalgo-website
 
-WORKDIR /app
-
-COPY package*json ./
+COPY learnalgo-website/package*.json ./
 
 RUN npm install
 
-COPY . .
+COPY learnalgo-website/ .
 
-ENV PORT=8080
+EXPOSE 3000
+
+CMD ["npm", "start"]
